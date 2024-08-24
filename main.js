@@ -10,3 +10,13 @@ document.querySelectorAll('.accordion').forEach((accordion) => {
         }
     });
 });
+
+document.getElementById('toggleButton').addEventListener('click', function() {
+    const imageContainer = document.getElementById('imageContainer');
+    const upArrow = document.getElementById('UpArrow');
+    const downArrow = document.getElementById('DownArrow');
+    downArrow.classList.toggle('close');
+    upArrow.classList.toggle('close');
+    imageContainer.classList.toggle('collapsed');
+});
+

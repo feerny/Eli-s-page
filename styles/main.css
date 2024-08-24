@@ -3,11 +3,21 @@ body {
     background-color: #e1f5fe;
     color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
 }
 header {
     text-align: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 40px;
+    justify-content: center;
+    display: flex;
+    background: radial-gradient(circle at 10% 10%, #3e73f0 5%, transparent 5%),
+    radial-gradient(circle at 90% 10%, #3e73f0 5%, transparent 5%),
+    radial-gradient(circle at 90% 90%, #3e73f0 5%, transparent 5%),
+    radial-gradient(circle at 10% 90%, #3e73f0 5%, transparent 5%);
+  background-size: 20px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .header-content {
@@ -93,4 +103,54 @@ header h1 {
 .accordion-content p {
     margin: 0;
     color: #555;
+}
+
+
+.image-toggle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.arrow-icon.close {
+    display: none;
+}
+
+.arrow-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrow-icon2.close {
+    display: block;
+}
+
+.arrow-icon2 {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrow-icon:hover {
+    transform: scale(1.1);
+}
+
+.toggle-image {
+    max-width: 30%;
+    height: auto;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+}
+
+#imageContainer {
+    max-height: 300px; /* Ajusta según el tamaño de tu imagen */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+#imageContainer.collapsed {
+    max-height: 0;
 }
