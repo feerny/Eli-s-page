@@ -11,6 +11,13 @@ document.querySelectorAll('.accordion').forEach((accordion) => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('currentYear').textContent = currentYear;
+});
+
+
+
 document.getElementById('toggleButton').addEventListener('click', function() {
     const imageContainer = document.getElementById('imageContainer');
     const upArrow = document.getElementById('UpArrow');

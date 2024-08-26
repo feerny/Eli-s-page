@@ -4,20 +4,30 @@ body {
     color: #333;
     margin: 0;
     padding: 0px;
+    
 }
 header {
     text-align: center;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    color: #333;
     justify-content: center;
     display: flex;
-    background: radial-gradient(circle at 10% 10%, #3e73f0 5%, transparent 5%),
-    radial-gradient(circle at 90% 10%, #3e73f0 5%, transparent 5%),
-    radial-gradient(circle at 90% 90%, #3e73f0 5%, transparent 5%),
-    radial-gradient(circle at 10% 90%, #3e73f0 5%, transparent 5%);
-  background-size: 20px 20px;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #e1f5fe;
+    font-size: 14px;
+    color: #0277bd;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
 
 .header-content {
@@ -31,6 +41,9 @@ header {
     gap: 10px;
 }
 
+.seccionbody{
+    padding-bottom: 75px;
+}
 .plane-icon {
     width: 30px;
     height: 30px;
@@ -67,11 +80,11 @@ header h1 {
 .accordion {
     background-color: #ffffff;
     border: 2px solid #01579b;
+    cursor: pointer;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .accordion:hover {
@@ -96,8 +109,9 @@ header h1 {
     border-top: 1px solid #ddd;
 }
 
+
 .accordion.active .accordion-content {
-    max-height: 200px; /* Ajusta según el contenido */
+    max-height: 400px; /* Ajusta según el contenido */
 }
 
 .accordion-content p {
@@ -106,10 +120,26 @@ header h1 {
 }
 
 
-.image-toggle {
-    text-align: center;
-    margin-top: 20px;
+.toggle-image {
+    max-width: 30%;
+    margin-bottom: 30px;
+    height: auto;
+    transition: max-height 0.6s ease;
+    overflow: hidden;
+    border: 8px solid #01579b; /* Color del borde alineado con los tonos de la página */
+    border-radius: 15px; /* Bordes redondeados para un estilo moderno */
+    box-shadow: 0 0 15px rgba(1, 87, 155, 0.3); /* Sombra suave con un tono azul */
 }
+
+
+
+
+.button-arrow{
+    border: none;
+    background-color: transparent;
+}
+
+
 
 .arrow-icon.close {
     display: none;
@@ -138,17 +168,12 @@ header h1 {
     transform: scale(1.1);
 }
 
-.toggle-image {
-    max-width: 30%;
-    height: auto;
-    transition: max-height 0.5s ease;
-    overflow: hidden;
-}
+
 
 #imageContainer {
-    max-height: 300px; /* Ajusta según el tamaño de tu imagen */
+    max-height: 550px; /* Ajusta según el tamaño de tu imagen */
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.6s ease;
 }
 
 #imageContainer.collapsed {
